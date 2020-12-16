@@ -1,0 +1,11 @@
+CC = "gcc"
+
+task :default => "test"
+
+file "test" => "test.o" do
+  sh "#{CC} -o test test.o"
+end
+
+file "test.o" => "test.c" do
+  sh "#{CC} -c test.c"
+end
