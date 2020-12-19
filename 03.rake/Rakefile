@@ -9,3 +9,4 @@ end
 file "test.o" => "test.c" do
   sh "#{CC} -c test.c"
 end
+
